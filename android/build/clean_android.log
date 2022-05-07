@@ -1,12 +1,12 @@
 
-5.5.2022, 19:55:52
+7.5.2022, 20:51:46
 
 Operating System
   Name                        = Fedora
   Version                     = 35
   Architecture                = 64bit
   # CPUs                      = 12
-  Memory                      = 16372989952
+  Memory                      = 16372998144
 
 Node.js
   Node.js Version             = 16.14.0
@@ -25,9 +25,7 @@ Command
 
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/.gradle
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/.idea
-[DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/build
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/build.gradle
-[DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/build_android.log
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/gradle
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/gradle.properties
 [DEBUG]  Deleting /home/miga/dev/ti.compass/android/build/gradlew
