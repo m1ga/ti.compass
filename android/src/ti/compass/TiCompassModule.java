@@ -100,6 +100,5 @@ public class TiCompassModule extends KrollModule {
             }
         };
         sensorManager.registerListener(eventListenerAccelerometer, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_GAME);
-
     }
 }
