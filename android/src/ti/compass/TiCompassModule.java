@@ -92,6 +92,7 @@ public class TiCompassModule extends KrollModule {
                 float x = values[0];
                 float y = values[1];
                 float z = values[2];
+                Log.i(LCAT, x + " " + y + " " + z);
             }
 
             @Override
@@ -102,4 +103,3 @@ public class TiCompassModule extends KrollModule {
 
     }
 }
-
