@@ -21,7 +21,6 @@ import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.kroll.common.Log;
 import org.appcelerator.kroll.common.TiConfig;
-import org.appcelerator.titanium.TiDimension;
 import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.titanium.util.TiConvert;
 import org.appcelerator.titanium.util.TiLocationHelper;
@@ -83,7 +82,14 @@ public class StageProxy extends TiViewProxy {
         customView.getLayoutParams().optionHeight = TiConvert.toTiDimension("100", 100);
         view.add(customView);
     }
-    
+
+    public void setPosition(int left, int top) {
+        customView.getNativeView().setLeft(left * 10);
+        customView.getNativeView().setTop(top * 10);
+        customView.getNativeView().setRight(left * 10 + 100);
+        customView.getNativeView().setBottom(top * 10 + 100);
+    }
+
     // Methods
     @SuppressLint("MissingPermission")
     @Kroll.method
@@ -137,6 +143,8 @@ public class StageProxy extends TiViewProxy {
                 float y = values[1];
                 float z = values[2];
                 Log.i(LCAT, x + " " + y + " " + z);
+
+                setPosition((int) x, (int) z);
             }
 
             @Override
