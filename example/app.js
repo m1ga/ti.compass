@@ -5,6 +5,9 @@
 */
 const win = Ti.UI.createWindow();
 const compass = require("ti.compass");
+const compassStage = compass.createStage({
+	backgroundColor: "red"
+});
 
 win.addEventListener("open", e => {
 	Ti.Geolocation.requestLocationPermissions(Ti.Geolocation.AUTHORIZATION_WHEN_IN_USE, function(e) {
@@ -12,10 +15,15 @@ win.addEventListener("open", e => {
 			run();
 		}
 	});
+
+	compassStage.createInfoBox({
+		text: "test"
+	});
 })
 
+win.add(compassStage);
 
 function run() {
-	compass.init();
+	compassStage.init();
 }
 win.open();
